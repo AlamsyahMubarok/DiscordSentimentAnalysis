@@ -1,39 +1,49 @@
 # Discord App Review Sentiment Analysis
 
-**Name:** Sultan Alamsyah Lintang Mubarok
-**Student ID (NRP):** 5026231188
+**Name : Sultan Alamsyah Lintang Mubarok**
+**NRP : 5026231188**
 
-## Project Overview
+## 1. Project Overview
 
-This project aims to collect and analyze user reviews of the **Discord mobile application** from the **Google Play Store**. The collected reviews are used as a dataset for sentiment analysis, which helps identify users' opinions, experiences, and overall satisfaction with the application.
+This project focuses on collecting and preparing user review data from the **Discord mobile application** available on the **Google Play Store**. The dataset collected in this project will be used for **sentiment analysis and natural language processing (NLP)**.
 
-The dataset is obtained through web scraping using the **Google Play Scraper** library in Python. The scraped reviews are then stored in a CSV file to be used for further analysis.
+User reviews provide valuable insights into user satisfaction, complaints, and suggestions regarding the application. By collecting and analyzing these reviews, we can better understand how users perceive the performance and quality of the Discord application.
 
----
-
-## Project Objectives
-
-The main objectives of this project are:
-
-* To collect user review data from the Google Play Store for the Discord application.
-* To build a dataset of user feedback for sentiment analysis.
-* To understand user sentiment toward the Discord mobile application.
-* To prepare data that can be used for further natural language processing (NLP) tasks.
+The data collection process is conducted using **web scraping techniques** through the Python library **google-play-scraper**.
 
 ---
 
-## Methodology
+## 2. Project Objectives
 
-The project follows several main steps:
+The objectives of this project are:
 
-### 1. Data Collection
+1. To collect user review data from the Google Play Store.
+2. To build a dataset of Discord application reviews.
+3. To prepare the dataset for sentiment analysis.
+4. To analyze user feedback related to the Discord mobile application.
 
-User reviews are collected from the Google Play Store using the **google-play-scraper** Python library. The target application in this project is:
+---
 
-**Application Name:** Discord
-**Application ID:** `com.discord`
+## 3. Target Application
 
-The scraper retrieves review information such as:
+| Application | Platform          | Application ID |
+| ----------- | ----------------- | -------------- |
+| Discord     | Google Play Store | `com.discord`  |
+
+Google Play Store Link:
+https://play.google.com/store/apps/details?id=com.discord
+
+---
+
+## 4. Methodology
+
+The methodology of this project consists of several stages.
+
+### 4.1 Data Collection
+
+User reviews are collected from the Google Play Store using the **google-play-scraper** Python library.
+
+The scraping process collects review information such as:
 
 * Review content
 * Rating score
@@ -41,37 +51,87 @@ The scraper retrieves review information such as:
 * Application version
 * Review timestamp
 
-### 2. Data Processing
-
-The scraped data is converted into a **Pandas DataFrame** to make it easier to process and analyze.
-
-### 3. Data Cleaning
-
-The dataset is filtered to keep only relevant attributes needed for analysis, including:
-
-* `content` – the text of the review
-* `score` – rating given by the user
-* `thumbsUpCount` – number of likes on the review
-* `reviewCreatedVersion` – version of the app used by the reviewer
-* `at` – review timestamp
-* `appVersion` – application version
-
-### 4. Data Export
-
-The processed data is exported into a **CSV file** which will be used as the dataset for further sentiment analysis tasks.
+The collected data represents user feedback about the Discord mobile application.
 
 ---
 
-## Technologies Used
+### 4.2 Data Processing
 
-* **Python**
-* **Google Play Scraper**
-* **Pandas**
-* **Google Colab / Jupyter Notebook**
+The scraped data is converted into a **Pandas DataFrame** to facilitate data processing and manipulation.
+
+This step helps transform raw data into a structured dataset suitable for analysis.
 
 ---
 
-## Output Dataset
+### 4.3 Data Cleaning
+
+Only relevant attributes are selected to ensure the dataset remains concise and useful for analysis.
+
+The selected columns include:
+
+| Column               | Description                                     |
+| -------------------- | ----------------------------------------------- |
+| content              | User review text                                |
+| score                | Rating score given by the user                  |
+| thumbsUpCount        | Number of likes received by the review          |
+| reviewCreatedVersion | Version of the application used by the reviewer |
+| at                   | Timestamp when the review was created           |
+| appVersion           | Version of the application                      |
+
+---
+
+### 4.4 Data Export
+
+After processing and cleaning, the dataset is exported into a **CSV file**.
+
+```text
+Review_App_Discord.csv
+```
+
+This dataset will be used for further sentiment analysis.
+
+---
+
+## 5. Project Workflow
+
+The workflow of this project can be described as follows:
+
+```
+Google Play Store
+        │
+        ▼
+Web Scraping (google-play-scraper)
+        │
+        ▼
+Raw Review Data
+        │
+        ▼
+Data Processing (Pandas)
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+CSV Dataset
+        │
+        ▼
+Sentiment Analysis
+```
+
+---
+
+## 6. Technologies Used
+
+The technologies used in this project include:
+
+* Python
+* Google Play Scraper
+* Pandas
+* Jupyter Notebook / Google Colab
+
+---
+
+## 7. Dataset Output
 
 The scraping process generates a dataset in CSV format:
 
@@ -79,11 +139,28 @@ The scraping process generates a dataset in CSV format:
 Review_App_Discord.csv
 ```
 
-This dataset contains thousands of Discord user reviews collected directly from the Google Play Store.
+The dataset contains thousands of user reviews collected from the Google Play Store and will be used for sentiment analysis.
 
 ---
 
+## 8. Project Structure
 
+Example repository structure:
 
+```
+discord-sentiment-analysis
+│
+├── notebook
+│   └── scraping_discord_reviews.ipynb
+│
+├── dataset
+│   └── Review_App_Discord.csv
+│
+├── README.md
+│
+└── requirements.txt
+```
 
+---
 
+The data collected in this project is sourced from publicly available user reviews on the Google Play Store and is intended solely for **educational and research purposes**.
