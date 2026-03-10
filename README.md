@@ -1,11 +1,13 @@
 # Discord App Review Sentiment Analysis
 
-**Name : Sultan Alamsyah Lintang Mubarok**
-**NRP : 5026231188**
+**Name:** Sultan Alamsyah Lintang Mubarok
+**NRP:** 5026231188
+
+---
 
 ## 1. Project Overview
 
-This project focuses on collecting and preparing user review data from the **Discord mobile application** available on the **Google Play Store**. The dataset collected in this project will be used for **sentiment analysis and natural language processing (NLP)**.
+This project focuses on collecting and preparing user review data from the **Discord mobile application** available on the **Google Play Store**. The dataset collected in this project will be used for **sentiment analysis and Natural Language Processing (NLP)**.
 
 User reviews provide valuable insights into user satisfaction, complaints, and suggestions regarding the application. By collecting and analyzing these reviews, we can better understand how users perceive the performance and quality of the Discord application.
 
@@ -30,7 +32,7 @@ The objectives of this project are:
 | ----------- | ----------------- | -------------- |
 | Discord     | Google Play Store | `com.discord`  |
 
-Google Play Store Link:
+Google Play Store link:
 https://play.google.com/store/apps/details?id=com.discord
 
 ---
@@ -84,7 +86,7 @@ The selected columns include:
 
 After processing and cleaning, the dataset is exported into a **CSV file**.
 
-```text
+```
 Review_App_Discord.csv
 ```
 
@@ -93,8 +95,6 @@ This dataset will be used for further sentiment analysis.
 ---
 
 ## 5. Project Workflow
-
-The workflow of this project can be described as follows:
 
 ```
 Google Play Store
@@ -145,8 +145,6 @@ The dataset contains thousands of user reviews collected from the Google Play St
 
 ## 8. Project Structure
 
-Example repository structure:
-
 ```
 discord-sentiment-analysis
 │
@@ -162,5 +160,7 @@ discord-sentiment-analysis
 ```
 
 ---
+
+## 9. Notes
 
 The data collected in this project is sourced from publicly available user reviews on the Google Play Store and is intended solely for **educational and research purposes**.
